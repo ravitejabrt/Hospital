@@ -16,6 +16,7 @@ app.use(morgan('dev'));
 
 // Serve frontend static files
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname)));
 
 // Helpers
 const genId = (prefix) => `${prefix}-${Date.now().toString().slice(-4)}${Math.floor(Math.random() * 90 + 10)}`;
