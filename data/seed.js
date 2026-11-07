@@ -744,4 +744,9 @@ const seedData = {
   ]
 };
 
-module.exports = seedData;
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = seedData;
+}
+if (typeof window !== 'undefined') {
+  window.SANJEEVANI_SEED = seedData;
+}
