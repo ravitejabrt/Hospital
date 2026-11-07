@@ -1,0 +1,170 @@
+/* public/css/style.css */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  --app-safe-top: env(safe-area-inset-top, 0px);
+  --app-safe-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: #0f172a;
+  color: #0f172a;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+code, .font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Hide scrollbar for native app feel */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Mobile Smartphone Shell Container (When tested on desktop) */
+.mobile-device-frame {
+  max-width: 440px;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 100vh;
+  background-color: #f8fafc;
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.5), 0 0 0 12px #1e293b, 0 0 0 14px #334155;
+  border-radius: 44px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Full responsive mobile mode */
+.mobile-device-fluid {
+  max-width: 100% !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  min-height: 100vh;
+  background-color: #f8fafc;
+}
+
+/* Mobile Dynamic Island / Notch */
+.mobile-notch {
+  width: 110px;
+  height: 24px;
+  background-color: #0f172a;
+  border-radius: 20px;
+  margin: 8px auto 4px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  z-index: 50;
+}
+
+/* Mobile Bottom Sheet Modal */
+.mobile-bottom-sheet {
+  animation: slideUpSheet 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes slideUpSheet {
+  from {
+    transform: translateY(100%);
+    opacity: 0.8;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Touch active scale */
+button, .touch-btn {
+  transition: transform 0.1s ease, background-color 0.15s ease;
+}
+button:active, .touch-btn:active {
+  transform: scale(0.97);
+}
+
+/* Flag badges */
+.flag-normal {
+  background-color: #ecfdf5;
+  color: #047857;
+  border: 1px solid #a7f3d0;
+}
+
+.flag-high {
+  background-color: #fef2f2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+  font-weight: 700;
+}
+
+.flag-low {
+  background-color: #fffbeb;
+  color: #b45309;
+  border: 1px solid #fde68a;
+  font-weight: 700;
+}
+
+.flag-critical {
+  background-color: #ffe4e6;
+  color: #9f1239;
+  border: 1px solid #fda4af;
+  font-weight: 800;
+  animation: pulse-critical 2s infinite;
+}
+
+@keyframes pulse-critical {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.75; }
+}
+
+/* Tube Color Pills */
+.tube-purple { background-color: #f3e8ff; color: #7e22ce; border: 1px solid #d8b4fe; }
+.tube-red { background-color: #ffe4e6; color: #be123c; border: 1px solid #fecdd3; }
+.tube-grey { background-color: #f1f5f9; color: #475569; border: 1px solid #cbd5e1; }
+.tube-blue { background-color: #e0f2fe; color: #0369a1; border: 1px solid #bae6fd; }
+
+/* Gradient backgrounds */
+.gradient-blood {
+  background: linear-gradient(135deg, #e11d48 0%, #be123c 60%, #881337 100%);
+}
+.gradient-header {
+  background: linear-gradient(135deg, #0ea5e9 0%, #2563eb 50%, #4f46e5 100%);
+}
+
+/* Print Media Styles */
+@media print {
+  body {
+    background: white !important;
+  }
+  .mobile-device-frame {
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    max-width: 100% !important;
+  }
+  body * {
+    visibility: hidden;
+  }
+  #printableReportArea, #printableReportArea * {
+    visibility: visible;
+  }
+  #printableReportArea {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    background: white;
+  }
+  .no-print {
+    display: none !important;
+  }
+}

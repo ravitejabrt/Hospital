@@ -1,0 +1,1480 @@
+{
+  "hospitalInfo": {
+    "name": "Sanjeevani Multi-Specialty Hospital & Diagnostic Blood Center",
+    "tagline": "NABL & NABH Accredited Healthcare & Advanced Pathology Laboratory",
+    "address": "Plot 12, Ring Road, Metro Healthcare Enclave, New Delhi - 110029",
+    "phone": "+91 (011) 2685-4000 / +91 98100 88220",
+    "email": "contact@sanjeevani-hospital.in",
+    "nablLicense": "NABL-MED-LAB/2026/8942",
+    "currency": "₹"
+  },
+  "users": [
+    {
+      "id": "usr_admin",
+      "name": "Dr. Arvind Sharma",
+      "email": "admin@hospital.com",
+      "password": "admin",
+      "role": "admin",
+      "department": "Hospital Administration & Clinical Governance",
+      "specialty": "Medical Director (MD, MHA - AIIMS New Delhi)",
+      "phone": "+91 98111 23450",
+      "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=250"
+    },
+    {
+      "id": "usr_doc1",
+      "name": "Dr. Priya Nair",
+      "email": "doctor@hospital.com",
+      "password": "doctor",
+      "role": "doctor",
+      "specialty": "Chief Cardiologist & Senior Consultant",
+      "department": "Cardiology",
+      "qualification": "MBBS, MD (Medicine), DM (Cardiology) - AIIMS New Delhi",
+      "room": "OPD Consultation Suite 204",
+      "phone": "+91 98222 34560",
+      "consultationFee": 800,
+      "avatar": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=250"
+    },
+    {
+      "id": "usr_doc2",
+      "name": "Dr. Rajesh Kulkarni",
+      "email": "doctor2@hospital.com",
+      "password": "doctor",
+      "role": "doctor",
+      "specialty": "Senior Consultant Physician & Diabetologist",
+      "department": "General Medicine",
+      "qualification": "MBBS, MD (Internal Medicine) - KEM Hospital, Mumbai",
+      "room": "OPD Clinic 108",
+      "phone": "+91 98333 45670",
+      "consultationFee": 500,
+      "avatar": "https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=250"
+    },
+    {
+      "id": "usr_lab1",
+      "name": "Suresh Verma",
+      "email": "lab@hospital.com",
+      "password": "lab",
+      "role": "lab_technician",
+      "title": "Lead Clinical Pathologist & Laboratory In-charge",
+      "department": "Pathology & Blood Diagnostic Center",
+      "license": "DCP/NABL-DEL-7781",
+      "qualification": "MD (Pathology) - CMC Vellore",
+      "phone": "+91 98444 56780",
+      "avatar": "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=250"
+    },
+    {
+      "id": "usr_rec1",
+      "name": "Ananya Deshmukh",
+      "email": "reception@hospital.com",
+      "password": "reception",
+      "role": "receptionist",
+      "title": "Front Desk & Patient Admissions Coordinator",
+      "department": "Patient Care Services",
+      "phone": "+91 98555 67890",
+      "avatar": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=250"
+    },
+    {
+      "id": "usr_pharm1",
+      "name": "Manoj Kumar",
+      "email": "pharmacy@hospital.com",
+      "password": "pharmacy",
+      "role": "pharmacist",
+      "title": "Chief Pharmacist & Billing Officer",
+      "department": "Pharmacy & Dispensary",
+      "phone": "+91 98666 78901",
+      "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=250"
+    },
+    {
+      "id": "usr_pat1",
+      "name": "Ramesh Patel",
+      "email": "patient@hospital.com",
+      "password": "patient",
+      "role": "patient",
+      "patientId": "PAT-1001",
+      "phone": "+91 98765 43210",
+      "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=250"
+    },
+    {
+      "id": "USR-183296",
+      "name": "Dr Raviteja Bandaru",
+      "email": "bandaru@hspc.com",
+      "password": "hospital123",
+      "role": "doctor",
+      "department": "Orthopedic",
+      "specialty": "Surgery",
+      "phone": "+91 98000 00000",
+      "avatar": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&q=80&w=250"
+    }
+  ],
+  "labTestsCatalog": [
+    {
+      "id": "LAB-CBC",
+      "code": "CBC-01",
+      "name": "Complete Blood Count (CBC) with Differential & ESR",
+      "category": "Hematology",
+      "sampleType": "Whole Blood",
+      "tubeColor": "Lavender / Purple (EDTA)",
+      "fastingRequired": false,
+      "tatHours": 3,
+      "price": 350,
+      "description": "Comprehensive evaluation of cellular blood components including Hemoglobin, RBC, WBC, and Platelets.",
+      "parameters": [
+        {
+          "key": "hb",
+          "name": "Hemoglobin",
+          "unit": "g/dL",
+          "normalMin": 13,
+          "normalMax": 17.5,
+          "maleRange": "13.0 - 17.5",
+          "femaleRange": "12.0 - 15.5",
+          "criticalLow": 7,
+          "criticalHigh": 20
+        },
+        {
+          "key": "rbc",
+          "name": "RBC Count",
+          "unit": "million/mcL",
+          "normalMin": 4.5,
+          "normalMax": 5.9,
+          "maleRange": "4.5 - 5.9",
+          "femaleRange": "4.0 - 5.2"
+        },
+        {
+          "key": "wbc",
+          "name": "Total WBC Count (TLC)",
+          "unit": "/mcL",
+          "normalMin": 4000,
+          "normalMax": 11000,
+          "criticalLow": 2500,
+          "criticalHigh": 25000
+        },
+        {
+          "key": "platelets",
+          "name": "Platelet Count",
+          "unit": "lakhs/mcL",
+          "normalMin": 1.5,
+          "normalMax": 4.5,
+          "criticalLow": 0.5,
+          "criticalHigh": 8
+        },
+        {
+          "key": "hct",
+          "name": "Hematocrit (PCV)",
+          "unit": "%",
+          "normalMin": 38,
+          "normalMax": 50
+        },
+        {
+          "key": "neutrophils",
+          "name": "Neutrophils",
+          "unit": "%",
+          "normalMin": 40,
+          "normalMax": 75
+        },
+        {
+          "key": "lymphocytes",
+          "name": "Lymphocytes",
+          "unit": "%",
+          "normalMin": 20,
+          "normalMax": 45
+        },
+        {
+          "key": "monocytes",
+          "name": "Monocytes",
+          "unit": "%",
+          "normalMin": 2,
+          "normalMax": 8
+        },
+        {
+          "key": "eosinophils",
+          "name": "Eosinophils",
+          "unit": "%",
+          "normalMin": 1,
+          "normalMax": 6
+        },
+        {
+          "key": "basophils",
+          "name": "Basophils",
+          "unit": "%",
+          "normalMin": 0,
+          "normalMax": 1.5
+        }
+      ]
+    },
+    {
+      "id": "LAB-LIPID",
+      "code": "LIP-02",
+      "name": "Lipid Profile Panel (Complete)",
+      "category": "Biochemistry",
+      "sampleType": "Serum",
+      "tubeColor": "Red / Gold (SST Gel)",
+      "fastingRequired": true,
+      "fastingNote": "10-12 hours overnight fasting mandatory",
+      "tatHours": 4,
+      "price": 650,
+      "description": "Assesses cardiovascular risk by quantifying cholesterol, triglycerides, LDL, and protective HDL.",
+      "parameters": [
+        {
+          "key": "totalChol",
+          "name": "Total Cholesterol",
+          "unit": "mg/dL",
+          "normalMin": 125,
+          "normalMax": 200,
+          "criticalHigh": 300
+        },
+        {
+          "key": "triglycerides",
+          "name": "Serum Triglycerides",
+          "unit": "mg/dL",
+          "normalMin": 50,
+          "normalMax": 150,
+          "criticalHigh": 500
+        },
+        {
+          "key": "hdl",
+          "name": "HDL Cholesterol (Good)",
+          "unit": "mg/dL",
+          "normalMin": 40,
+          "normalMax": 60
+        },
+        {
+          "key": "ldl",
+          "name": "LDL Cholesterol (Bad)",
+          "unit": "mg/dL",
+          "normalMin": 50,
+          "normalMax": 100,
+          "criticalHigh": 190
+        },
+        {
+          "key": "vldl",
+          "name": "VLDL Cholesterol",
+          "unit": "mg/dL",
+          "normalMin": 5,
+          "normalMax": 30
+        },
+        {
+          "key": "cholHdlRatio",
+          "name": "Total Chol / HDL Ratio",
+          "unit": "Ratio",
+          "normalMin": 2.5,
+          "normalMax": 4.5
+        }
+      ]
+    },
+    {
+      "id": "LAB-LFT",
+      "code": "LFT-03",
+      "name": "Liver Function Test (LFT)",
+      "category": "Biochemistry",
+      "sampleType": "Serum",
+      "tubeColor": "Red / Gold (SST)",
+      "fastingRequired": false,
+      "tatHours": 4,
+      "price": 750,
+      "description": "Evaluates liver synthetic and excretory capacity, detecting hepatitis, fatty liver, and biliary disorders.",
+      "parameters": [
+        {
+          "key": "biliTotal",
+          "name": "Bilirubin - Total",
+          "unit": "mg/dL",
+          "normalMin": 0.2,
+          "normalMax": 1.2,
+          "criticalHigh": 5
+        },
+        {
+          "key": "biliDirect",
+          "name": "Bilirubin - Direct",
+          "unit": "mg/dL",
+          "normalMin": 0,
+          "normalMax": 0.3
+        },
+        {
+          "key": "sgptAlt",
+          "name": "SGPT / ALT (Alanine Aminotransferase)",
+          "unit": "U/L",
+          "normalMin": 7,
+          "normalMax": 45,
+          "criticalHigh": 200
+        },
+        {
+          "key": "sgotAst",
+          "name": "SGOT / AST (Aspartate Aminotransferase)",
+          "unit": "U/L",
+          "normalMin": 8,
+          "normalMax": 40,
+          "criticalHigh": 200
+        },
+        {
+          "key": "alp",
+          "name": "Alkaline Phosphatase (ALP)",
+          "unit": "U/L",
+          "normalMin": 44,
+          "normalMax": 147
+        },
+        {
+          "key": "totalProtein",
+          "name": "Total Protein",
+          "unit": "g/dL",
+          "normalMin": 6,
+          "normalMax": 8.3
+        },
+        {
+          "key": "albumin",
+          "name": "Serum Albumin",
+          "unit": "g/dL",
+          "normalMin": 3.5,
+          "normalMax": 5
+        },
+        {
+          "key": "globulin",
+          "name": "Serum Globulin",
+          "unit": "g/dL",
+          "normalMin": 2,
+          "normalMax": 3.5
+        }
+      ]
+    },
+    {
+      "id": "LAB-KFT",
+      "code": "KFT-04",
+      "name": "Kidney Function Test (KFT / RFT)",
+      "category": "Biochemistry",
+      "sampleType": "Serum",
+      "tubeColor": "Red / Gold (SST)",
+      "fastingRequired": false,
+      "tatHours": 3,
+      "price": 700,
+      "description": "Screens renal filtration rate and metabolic clearance, detecting early renal impairment.",
+      "parameters": [
+        {
+          "key": "serumCreatinine",
+          "name": "Serum Creatinine",
+          "unit": "mg/dL",
+          "normalMin": 0.7,
+          "normalMax": 1.3,
+          "criticalHigh": 3
+        },
+        {
+          "key": "bloodUrea",
+          "name": "Blood Urea Nitrogen (BUN)",
+          "unit": "mg/dL",
+          "normalMin": 7,
+          "normalMax": 20,
+          "criticalHigh": 60
+        },
+        {
+          "key": "uricAcid",
+          "name": "Serum Uric Acid",
+          "unit": "mg/dL",
+          "normalMin": 3.5,
+          "normalMax": 7.2
+        },
+        {
+          "key": "egfr",
+          "name": "Estimated GFR",
+          "unit": "mL/min/1.73m²",
+          "normalMin": 90,
+          "normalMax": 120,
+          "criticalLow": 30
+        }
+      ]
+    },
+    {
+      "id": "LAB-GLUCOSE",
+      "code": "GLU-05",
+      "name": "Blood Glucose (Fasting & Post-Prandial)",
+      "category": "Biochemistry",
+      "sampleType": "Plasma",
+      "tubeColor": "Grey (Sodium Fluoride)",
+      "fastingRequired": true,
+      "fastingNote": "8 hours fasting required for FBS",
+      "tatHours": 2,
+      "price": 150,
+      "description": "Essential diagnostic test for diabetes mellitus and monitoring glycemic regulation.",
+      "parameters": [
+        {
+          "key": "fbs",
+          "name": "Fasting Blood Sugar (FBS)",
+          "unit": "mg/dL",
+          "normalMin": 70,
+          "normalMax": 99,
+          "criticalLow": 50,
+          "criticalHigh": 250
+        },
+        {
+          "key": "ppbs",
+          "name": "Post-Prandial Blood Sugar (PPBS)",
+          "unit": "mg/dL",
+          "normalMin": 90,
+          "normalMax": 140,
+          "criticalHigh": 300
+        }
+      ]
+    },
+    {
+      "id": "LAB-HBA1C",
+      "code": "HBA-06",
+      "name": "Glycated Hemoglobin (HbA1c)",
+      "category": "Endocrinology",
+      "sampleType": "Whole Blood",
+      "tubeColor": "Lavender / Purple (EDTA)",
+      "fastingRequired": false,
+      "tatHours": 4,
+      "price": 550,
+      "description": "Gold standard diagnostic test evaluating 3-month average glycemic control.",
+      "parameters": [
+        {
+          "key": "hba1cVal",
+          "name": "HbA1c Concentration",
+          "unit": "%",
+          "normalMin": 4,
+          "normalMax": 5.6,
+          "criticalHigh": 10
+        },
+        {
+          "key": "eag",
+          "name": "Estimated Average Glucose (eAG)",
+          "unit": "mg/dL",
+          "normalMin": 70,
+          "normalMax": 114
+        }
+      ]
+    },
+    {
+      "id": "LAB-THYROID",
+      "code": "THY-07",
+      "name": "Thyroid Function Panel (FT3, FT4, TSH Ultrasensitive)",
+      "category": "Endocrinology",
+      "sampleType": "Serum",
+      "tubeColor": "Red / Gold (SST)",
+      "fastingRequired": false,
+      "tatHours": 6,
+      "price": 650,
+      "description": "Assesses thyroid gland activity, screening for hyperthyroidism and hypothyroidism.",
+      "parameters": [
+        {
+          "key": "tsh",
+          "name": "TSH (Ultrasensitive)",
+          "unit": "uIU/mL",
+          "normalMin": 0.35,
+          "normalMax": 4.5,
+          "criticalHigh": 20,
+          "criticalLow": 0.05
+        },
+        {
+          "key": "ft3",
+          "name": "Free Triiodothyronine (FT3)",
+          "unit": "pg/mL",
+          "normalMin": 2.3,
+          "normalMax": 4.2
+        },
+        {
+          "key": "ft4",
+          "name": "Free Thyroxine (FT4)",
+          "unit": "ng/dL",
+          "normalMin": 0.89,
+          "normalMax": 1.76
+        }
+      ]
+    },
+    {
+      "id": "LAB-ELECTRO",
+      "code": "ELE-08",
+      "name": "Serum Electrolytes Panel (Na+, K+, Cl-)",
+      "category": "Biochemistry",
+      "sampleType": "Serum",
+      "tubeColor": "Red / Gold (SST)",
+      "fastingRequired": false,
+      "tatHours": 2,
+      "price": 450,
+      "description": "Quantifies body fluid and electrolyte balance; crucial for cardiac and renal stability.",
+      "parameters": [
+        {
+          "key": "sodium",
+          "name": "Sodium (Na+)",
+          "unit": "mEq/L",
+          "normalMin": 135,
+          "normalMax": 145,
+          "criticalLow": 120,
+          "criticalHigh": 155
+        },
+        {
+          "key": "potassium",
+          "name": "Potassium (K+)",
+          "unit": "mEq/L",
+          "normalMin": 3.5,
+          "normalMax": 5.1,
+          "criticalLow": 2.8,
+          "criticalHigh": 6.2
+        },
+        {
+          "key": "chloride",
+          "name": "Chloride (Cl-)",
+          "unit": "mEq/L",
+          "normalMin": 96,
+          "normalMax": 106
+        },
+        {
+          "key": "bicarbonate",
+          "name": "Bicarbonate (HCO3-)",
+          "unit": "mEq/L",
+          "normalMin": 22,
+          "normalMax": 29
+        }
+      ]
+    },
+    {
+      "id": "LAB-DENGUE",
+      "code": "DEN-09",
+      "name": "Dengue Duo Serology (NS1 Antigen + IgM/IgG Antibodies)",
+      "category": "Serology",
+      "sampleType": "Serum",
+      "tubeColor": "Red / Gold (SST)",
+      "fastingRequired": false,
+      "tatHours": 3,
+      "price": 900,
+      "description": "Rapid immunochromatographic assay for acute and convalescent dengue viral infection.",
+      "parameters": [
+        {
+          "key": "dengueNs1",
+          "name": "Dengue NS1 Antigen",
+          "unit": "Status",
+          "normalMin": "Negative",
+          "normalMax": "Negative"
+        },
+        {
+          "key": "dengueIgm",
+          "name": "Dengue IgM Antibodies",
+          "unit": "Status",
+          "normalMin": "Negative",
+          "normalMax": "Negative"
+        },
+        {
+          "key": "dengueIgg",
+          "name": "Dengue IgG Antibodies",
+          "unit": "Status",
+          "normalMin": "Negative",
+          "normalMax": "Negative"
+        }
+      ]
+    },
+    {
+      "id": "LAB-BLOODGRP",
+      "code": "BGP-10",
+      "name": "Blood Grouping & Rh Factor Typing",
+      "category": "Immunohematology",
+      "sampleType": "Whole Blood",
+      "tubeColor": "Lavender / Purple (EDTA)",
+      "fastingRequired": false,
+      "tatHours": 1,
+      "price": 150,
+      "description": "Determines ABO blood group and Rh(D) status for transfusions and emergencies.",
+      "parameters": [
+        {
+          "key": "aboGroup",
+          "name": "ABO Blood Group",
+          "unit": "Group",
+          "normalMin": "-",
+          "normalMax": "-"
+        },
+        {
+          "key": "rhFactor",
+          "name": "Rh(D) Typing",
+          "unit": "Status",
+          "normalMin": "Positive/Negative",
+          "normalMax": "-"
+        }
+      ]
+    }
+  ],
+  "labPackages": [
+    {
+      "id": "PKG-EXEC",
+      "name": "Executive Comprehensive Health Checkup",
+      "code": "PKG-01",
+      "testIds": [
+        "LAB-CBC",
+        "LAB-LIPID",
+        "LAB-LFT",
+        "LAB-KFT",
+        "LAB-GLUCOSE",
+        "LAB-THYROID"
+      ],
+      "totalTestsCount": 6,
+      "originalPrice": 3800,
+      "discountedPrice": 2499,
+      "turnaroundTime": "Same day (6 hours)",
+      "recommendedFor": "Men & Women above 30 for holistic vital organ health screening"
+    },
+    {
+      "id": "PKG-DIABETIC",
+      "name": "Comprehensive Diabetic Care Panel",
+      "code": "PKG-02",
+      "testIds": [
+        "LAB-GLUCOSE",
+        "LAB-HBA1C",
+        "LAB-KFT",
+        "LAB-LIPID"
+      ],
+      "totalTestsCount": 4,
+      "originalPrice": 2100,
+      "discountedPrice": 1499,
+      "turnaroundTime": "4 hours",
+      "recommendedFor": "Diabetic and pre-diabetic patients monitoring glycemic control & renal status"
+    },
+    {
+      "id": "PKG-CARDIAC",
+      "name": "Advanced Cardio-Metabolic Screen",
+      "code": "PKG-03",
+      "testIds": [
+        "LAB-CBC",
+        "LAB-LIPID",
+        "LAB-ELECTRO",
+        "LAB-KFT"
+      ],
+      "totalTestsCount": 4,
+      "originalPrice": 2550,
+      "discountedPrice": 1899,
+      "turnaroundTime": "4 hours",
+      "recommendedFor": "Individuals with hypertension, chest discomfort, or family history of CVD"
+    }
+  ],
+  "patients": [
+    {
+      "id": "PAT-1001",
+      "name": "Ramesh Patel",
+      "age": 48,
+      "gender": "Male",
+      "dob": "1978-04-12",
+      "bloodGroup": "O+",
+      "phone": "+91 98765 43210",
+      "email": "patient@hospital.com",
+      "address": "B-42, Lajpat Nagar, New Delhi",
+      "emergencyContact": {
+        "name": "Meena Patel",
+        "relation": "Spouse",
+        "phone": "+91 98765 43211"
+      },
+      "allergies": [
+        "Penicillin",
+        "Sulfa drugs"
+      ],
+      "chronicConditions": [
+        "Hypertension (Grade 1)",
+        "Mild Dyslipidemia"
+      ],
+      "registeredDate": "2026-09-15",
+      "vitals": {
+        "bloodPressure": "135/88 mmHg",
+        "pulse": 78,
+        "temperature": "98.6 °F",
+        "spO2": 98,
+        "weight": "78 kg",
+        "height": "172 cm",
+        "bmi": "26.4 (Slightly Overweight)"
+      }
+    },
+    {
+      "id": "PAT-1002",
+      "name": "Sunita Sharma",
+      "age": 58,
+      "gender": "Female",
+      "dob": "1968-11-20",
+      "bloodGroup": "B+",
+      "phone": "+91 98112 33445",
+      "email": "sunita.sharma@example.in",
+      "address": "Flat 304, Green Glen Layout, Bengaluru",
+      "emergencyContact": {
+        "name": "Amit Sharma",
+        "relation": "Son",
+        "phone": "+91 98112 33446"
+      },
+      "allergies": [
+        "None known"
+      ],
+      "chronicConditions": [
+        "Type 2 Diabetes Mellitus",
+        "Hypothyroidism"
+      ],
+      "registeredDate": "2026-10-02",
+      "vitals": {
+        "bloodPressure": "128/82 mmHg",
+        "pulse": 72,
+        "temperature": "98.4 °F",
+        "spO2": 99,
+        "weight": "64 kg",
+        "height": "158 cm",
+        "bmi": "25.6"
+      }
+    },
+    {
+      "id": "PAT-1003",
+      "name": "Vikram Malhotra",
+      "age": 34,
+      "gender": "Male",
+      "dob": "1992-06-18",
+      "bloodGroup": "A+",
+      "phone": "+91 98223 44556",
+      "email": "vikram.malhotra@example.in",
+      "address": "14, Pali Hill, Bandra West, Mumbai",
+      "emergencyContact": {
+        "name": "Neha Malhotra",
+        "relation": "Sister",
+        "phone": "+91 98223 44557"
+      },
+      "allergies": [
+        "Aspirin"
+      ],
+      "chronicConditions": [
+        "None"
+      ],
+      "registeredDate": "2026-11-01",
+      "vitals": {
+        "bloodPressure": "118/76 mmHg",
+        "pulse": 68,
+        "temperature": "101.4 °F",
+        "spO2": 97,
+        "weight": "74 kg",
+        "height": "180 cm",
+        "bmi": "22.8"
+      }
+    },
+    {
+      "id": "PAT-1004",
+      "name": "Kavita Krishnan",
+      "age": 28,
+      "gender": "Female",
+      "dob": "1998-02-14",
+      "bloodGroup": "AB+",
+      "phone": "+91 98334 55667",
+      "email": "kavita.krishnan@example.in",
+      "address": "88, Jubilee Hills, Road No. 36, Hyderabad",
+      "emergencyContact": {
+        "name": "Rohan Krishnan",
+        "relation": "Spouse",
+        "phone": "+91 98334 55668"
+      },
+      "allergies": [
+        "Latex"
+      ],
+      "chronicConditions": [
+        "Mild Asthma"
+      ],
+      "registeredDate": "2026-11-05",
+      "vitals": {
+        "bloodPressure": "115/75 mmHg",
+        "pulse": 80,
+        "temperature": "99.0 °F",
+        "spO2": 98,
+        "weight": "56 kg",
+        "height": "163 cm",
+        "bmi": "21.1"
+      }
+    }
+  ],
+  "labOrders": [
+    {
+      "id": "ORD-9001",
+      "patientId": "PAT-1001",
+      "patientName": "Ramesh Patel",
+      "patientAge": 48,
+      "patientGender": "Male",
+      "referringDoctor": "Dr. Priya Nair",
+      "orderDate": "2026-11-06T09:30:00Z",
+      "testId": "LAB-LIPID",
+      "testName": "Lipid Profile Panel (Complete)",
+      "category": "Biochemistry",
+      "tubeColor": "Red / Gold (SST)",
+      "sampleId": "SMP-88102",
+      "sampleCollectedAt": "2026-11-06T10:15:00Z",
+      "sampleCollectedBy": "Suresh Verma",
+      "phlebotomyNotes": "Patient verified 12 hours overnight fasting. Clean venipuncture right cubital fossa.",
+      "status": "COMPLETED",
+      "results": [
+        {
+          "key": "totalChol",
+          "name": "Total Cholesterol",
+          "value": 238,
+          "unit": "mg/dL",
+          "normalMin": 125,
+          "normalMax": 200,
+          "flag": "HIGH"
+        },
+        {
+          "key": "triglycerides",
+          "name": "Serum Triglycerides",
+          "value": 185,
+          "unit": "mg/dL",
+          "normalMin": 50,
+          "normalMax": 150,
+          "flag": "HIGH"
+        },
+        {
+          "key": "hdl",
+          "name": "HDL Cholesterol",
+          "value": 42,
+          "unit": "mg/dL",
+          "normalMin": 40,
+          "normalMax": 60,
+          "flag": "NORMAL"
+        },
+        {
+          "key": "ldl",
+          "name": "LDL Cholesterol",
+          "value": 159,
+          "unit": "mg/dL",
+          "normalMin": 50,
+          "normalMax": 100,
+          "flag": "HIGH"
+        },
+        {
+          "key": "vldl",
+          "name": "VLDL Cholesterol",
+          "value": 37,
+          "unit": "mg/dL",
+          "normalMin": 5,
+          "normalMax": 30,
+          "flag": "HIGH"
+        },
+        {
+          "key": "cholHdlRatio",
+          "name": "Total Chol / HDL Ratio",
+          "value": 5.6,
+          "unit": "Ratio",
+          "normalMin": 2.5,
+          "normalMax": 4.5,
+          "flag": "HIGH"
+        }
+      ],
+      "pathologistRemarks": "Dyslipidemia pattern with elevated Total Cholesterol and atherogenic LDL fraction. Recommended cardiovascular lifestyle modification and dietary lipid control.",
+      "verifiedBy": "Suresh Verma, Lead Clinical Pathologist",
+      "verifiedAt": "2026-11-06T13:45:00Z",
+      "barcode": "88102-LIP-2026"
+    },
+    {
+      "id": "ORD-9002",
+      "patientId": "PAT-1001",
+      "patientName": "Ramesh Patel",
+      "patientAge": 48,
+      "patientGender": "Male",
+      "referringDoctor": "Dr. Priya Nair",
+      "orderDate": "2026-11-06T09:30:00Z",
+      "testId": "LAB-CBC",
+      "testName": "Complete Blood Count (CBC) with Differential & ESR",
+      "category": "Hematology",
+      "tubeColor": "Lavender / Purple (EDTA)",
+      "sampleId": "SMP-88103",
+      "sampleCollectedAt": "2026-11-06T10:15:00Z",
+      "sampleCollectedBy": "Suresh Verma",
+      "phlebotomyNotes": "Clean venous blood collection, Lavender EDTA tube.",
+      "status": "COMPLETED",
+      "results": [
+        {
+          "key": "hb",
+          "name": "Hemoglobin",
+          "value": 14.8,
+          "unit": "g/dL",
+          "normalMin": 13,
+          "normalMax": 17.5,
+          "flag": "NORMAL"
+        },
+        {
+          "key": "rbc",
+          "name": "RBC Count",
+          "value": 5.1,
+          "unit": "million/mcL",
+          "normalMin": 4.5,
+          "normalMax": 5.9,
+          "flag": "NORMAL"
+        },
+        {
+          "key": "wbc",
+          "name": "Total WBC Count (TLC)",
+          "value": 7200,
+          "unit": "/mcL",
+          "normalMin": 4000,
+          "normalMax": 11000,
+          "flag": "NORMAL"
+        },
+        {
+          "key": "platelets",
+          "name": "Platelet Count",
+          "value": 2.45,
+          "unit": "lakhs/mcL",
+          "normalMin": 1.5,
+          "normalMax": 4.5,
+          "flag": "NORMAL"
+        },
+        {
+          "key": "hct",
+          "name": "Hematocrit (PCV)",
+          "value": 44.5,
+          "unit": "%",
+          "normalMin": 38,
+          "normalMax": 50,
+          "flag": "NORMAL"
+        },
+        {
+          "key": "neutrophils",
+          "name": "Neutrophils",
+          "value": 58,
+          "unit": "%",
+          "normalMin": 40,
+          "normalMax": 75,
+          "flag": "NORMAL"
+        },
+        {
+          "key": "lymphocytes",
+          "name": "Lymphocytes",
+          "unit": "%",
+          "value": 32,
+          "normalMin": 20,
+          "normalMax": 45,
+          "flag": "NORMAL"
+        },
+        {
+          "key": "monocytes",
+          "name": "Monocytes",
+          "unit": "%",
+          "value": 6,
+          "normalMin": 2,
+          "normalMax": 8,
+          "flag": "NORMAL"
+        },
+        {
+          "key": "eosinophils",
+          "name": "Eosinophils",
+          "unit": "%",
+          "value": 3,
+          "normalMin": 1,
+          "normalMax": 6,
+          "flag": "NORMAL"
+        },
+        {
+          "key": "basophils",
+          "name": "Basophils",
+          "unit": "%",
+          "value": 1,
+          "normalMin": 0,
+          "normalMax": 1.5,
+          "flag": "NORMAL"
+        }
+      ],
+      "pathologistRemarks": "Normocytic normochromic red cell indices. Normal total and differential count. Platelet count adequate.",
+      "verifiedBy": "Suresh Verma, Lead Clinical Pathologist",
+      "verifiedAt": "2026-11-06T12:30:00Z",
+      "barcode": "88103-CBC-2026"
+    },
+    {
+      "id": "ORD-9003",
+      "patientId": "PAT-1002",
+      "patientName": "Sunita Sharma",
+      "patientAge": 58,
+      "patientGender": "Female",
+      "referringDoctor": "Dr. Rajesh Kulkarni",
+      "orderDate": "2026-11-07T08:15:00Z",
+      "testId": "LAB-HBA1C",
+      "testName": "Glycated Hemoglobin (HbA1c)",
+      "category": "Endocrinology",
+      "tubeColor": "Lavender / Purple (EDTA)",
+      "sampleId": "SMP-88120",
+      "sampleCollectedAt": "2026-11-07T08:45:00Z",
+      "sampleCollectedBy": "Suresh Verma",
+      "phlebotomyNotes": "Standard EDTA whole blood collected.",
+      "status": "COMPLETED",
+      "results": [
+        {
+          "key": "hba1cVal",
+          "name": "HbA1c Concentration",
+          "value": 7.8,
+          "unit": "%",
+          "normalMin": 4,
+          "normalMax": 5.6,
+          "flag": "HIGH"
+        },
+        {
+          "key": "eag",
+          "name": "Estimated Average Glucose (eAG)",
+          "value": 177,
+          "unit": "mg/dL",
+          "normalMin": 70,
+          "normalMax": 114,
+          "flag": "HIGH"
+        }
+      ],
+      "pathologistRemarks": "HbA1c level of 7.8% indicates sub-optimal glycemic control in known diabetic. Clinical correlation with oral hypoglycemic drug advised.",
+      "verifiedBy": "Suresh Verma, Lead Clinical Pathologist",
+      "verifiedAt": "2026-11-07T11:20:00Z",
+      "barcode": "88120-HBA-2026"
+    },
+    {
+      "id": "ORD-9004",
+      "patientId": "PAT-1003",
+      "patientName": "Vikram Malhotra",
+      "patientAge": 34,
+      "patientGender": "Male",
+      "referringDoctor": "Dr. Rajesh Kulkarni",
+      "orderDate": "2026-11-07T10:00:00Z",
+      "testId": "LAB-DENGUE",
+      "testName": "Dengue Duo Serology (NS1 Antigen + IgM/IgG Antibodies)",
+      "category": "Serology",
+      "tubeColor": "Red / Gold (SST)",
+      "sampleId": "SMP-88135",
+      "sampleCollectedAt": "2026-11-07T10:30:00Z",
+      "sampleCollectedBy": "Suresh Verma",
+      "phlebotomyNotes": "Patient has high grade fever (Day 3). Centrifuged at 3000 RPM for serum testing.",
+      "status": "PROCESSING",
+      "results": [],
+      "pathologistRemarks": "",
+      "verifiedBy": "",
+      "verifiedAt": null,
+      "barcode": "88135-DEN-2026"
+    },
+    {
+      "id": "ORD-9005",
+      "patientId": "PAT-1004",
+      "patientName": "Kavita Krishnan",
+      "patientAge": 28,
+      "patientGender": "Female",
+      "referringDoctor": "Dr. Priya Nair",
+      "orderDate": "2026-11-07T11:30:00Z",
+      "testId": "LAB-CBC",
+      "testName": "Complete Blood Count (CBC) with Differential & ESR",
+      "category": "Hematology",
+      "tubeColor": "Lavender / Purple (EDTA)",
+      "sampleId": null,
+      "sampleCollectedAt": null,
+      "sampleCollectedBy": null,
+      "phlebotomyNotes": "",
+      "status": "ORDERED",
+      "results": [],
+      "pathologistRemarks": "",
+      "verifiedBy": "",
+      "verifiedAt": null,
+      "barcode": null
+    }
+  ],
+  "appointments": [
+    {
+      "id": "APT-2001",
+      "patientId": "PAT-1001",
+      "patientName": "Ramesh Patel",
+      "doctorName": "Dr. Priya Nair",
+      "doctorSpecialty": "Chief Cardiologist",
+      "date": "2026-11-08",
+      "time": "10:00 AM",
+      "token": "A-01",
+      "reason": "Cardiology routine review & lipid follow-up",
+      "status": "SCHEDULED",
+      "fee": 800
+    },
+    {
+      "id": "APT-2002",
+      "patientId": "PAT-1002",
+      "patientName": "Sunita Sharma",
+      "doctorName": "Dr. Rajesh Kulkarni",
+      "doctorSpecialty": "General Medicine & Diabetology",
+      "date": "2026-11-07",
+      "time": "09:00 AM",
+      "token": "B-03",
+      "reason": "Diabetes 3-month HbA1c review & titration",
+      "status": "COMPLETED",
+      "fee": 500
+    },
+    {
+      "id": "APT-2003",
+      "patientId": "PAT-1003",
+      "patientName": "Vikram Malhotra",
+      "doctorName": "Dr. Rajesh Kulkarni",
+      "doctorSpecialty": "General Medicine",
+      "date": "2026-11-07",
+      "time": "11:15 AM",
+      "token": "B-07",
+      "reason": "Acute febrile illness, joint pain & chills",
+      "status": "WAITING",
+      "fee": 500
+    },
+    {
+      "id": "APT-2004",
+      "patientId": "PAT-1004",
+      "patientName": "Kavita Krishnan",
+      "doctorName": "Dr. Priya Nair",
+      "doctorSpecialty": "Chief Cardiologist",
+      "date": "2026-11-08",
+      "time": "11:30 AM",
+      "token": "A-04",
+      "reason": "Occasional palpitations & exertional fatigue",
+      "status": "SCHEDULED",
+      "fee": 800
+    }
+  ],
+  "prescriptions": [
+    {
+      "id": "RX-501",
+      "patientId": "PAT-1001",
+      "patientName": "Ramesh Patel",
+      "doctorName": "Dr. Priya Nair",
+      "date": "2026-11-06",
+      "diagnosis": "Primary Hypercholesterolemia & Essential Hypertension",
+      "clinicalNotes": "Advised low-salt, low-oil diet with 30 mins daily walking. Avoid fried items.",
+      "medicines": [
+        {
+          "name": "Atorvastatin 20mg",
+          "dosage": "1 Tablet",
+          "frequency": "Once daily at night (OD)",
+          "duration": "30 days",
+          "instructions": "After dinner"
+        },
+        {
+          "name": "Amlodipine 5mg",
+          "dosage": "1 Tablet",
+          "frequency": "Once daily in morning (OD)",
+          "duration": "30 days",
+          "instructions": "Before breakfast"
+        }
+      ],
+      "recommendedTests": [
+        "Lipid Profile (in 6 weeks)",
+        "Liver Function Test"
+      ]
+    },
+    {
+      "id": "RX-502",
+      "patientId": "PAT-1002",
+      "patientName": "Sunita Sharma",
+      "doctorName": "Dr. Rajesh Kulkarni",
+      "date": "2026-11-07",
+      "diagnosis": "Type 2 Diabetes Mellitus - Uncontrolled",
+      "clinicalNotes": "Titrating Metformin. Emphasized low glycemic index diet and daily diabetic foot care.",
+      "medicines": [
+        {
+          "name": "Metformin Extended Release 1000mg",
+          "dosage": "1 Tablet",
+          "frequency": "Twice daily (BD)",
+          "duration": "60 days",
+          "instructions": "With meals"
+        },
+        {
+          "name": "Thyronorm (Levothyroxine) 50mcg",
+          "dosage": "1 Tablet",
+          "frequency": "Once daily (OD)",
+          "duration": "60 days",
+          "instructions": "Empty stomach early morning"
+        }
+      ],
+      "recommendedTests": [
+        "HbA1c (in 3 months)",
+        "Kidney Function Test"
+      ]
+    }
+  ],
+  "beds": [
+    {
+      "id": "BED-ICU-01",
+      "ward": "Intensive Coronary Care Unit (ICCU)",
+      "roomType": "ICU / CCU",
+      "number": "ICU-101",
+      "dailyRate": 4500,
+      "status": "OCCUPIED",
+      "patientId": "PAT-1003",
+      "patientName": "Vikram Malhotra",
+      "admittedDate": "2026-11-07"
+    },
+    {
+      "id": "BED-ICU-02",
+      "ward": "Intensive Care Unit (ICU)",
+      "roomType": "ICU / CCU",
+      "number": "ICU-102",
+      "dailyRate": 4500,
+      "status": "AVAILABLE",
+      "patientId": null,
+      "patientName": null,
+      "admittedDate": null
+    },
+    {
+      "id": "BED-GEN-M1",
+      "ward": "Male General Ward",
+      "roomType": "General Ward",
+      "number": "M-201",
+      "dailyRate": 750,
+      "status": "OCCUPIED",
+      "patientId": "PAT-1001",
+      "patientName": "Ramesh Patel",
+      "admittedDate": "2026-11-05"
+    },
+    {
+      "id": "BED-GEN-M2",
+      "ward": "Male General Ward",
+      "roomType": "General Ward",
+      "number": "M-202",
+      "dailyRate": 750,
+      "status": "AVAILABLE",
+      "patientId": null,
+      "patientName": null,
+      "admittedDate": null
+    },
+    {
+      "id": "BED-GEN-M3",
+      "ward": "Male General Ward",
+      "roomType": "General Ward",
+      "number": "M-203",
+      "dailyRate": 750,
+      "status": "AVAILABLE",
+      "patientId": null,
+      "patientName": null,
+      "admittedDate": null
+    },
+    {
+      "id": "BED-GEN-F1",
+      "ward": "Female General Ward",
+      "roomType": "General Ward",
+      "number": "F-210",
+      "dailyRate": 750,
+      "status": "AVAILABLE",
+      "patientId": null,
+      "patientName": null,
+      "admittedDate": null
+    },
+    {
+      "id": "BED-GEN-F2",
+      "ward": "Female General Ward",
+      "roomType": "General Ward",
+      "number": "F-211",
+      "dailyRate": 750,
+      "status": "AVAILABLE",
+      "patientId": null,
+      "patientName": null,
+      "admittedDate": null
+    },
+    {
+      "id": "BED-DLX-301",
+      "ward": "Deluxe Private Suite",
+      "roomType": "Deluxe Single AC",
+      "number": "DLX-301",
+      "dailyRate": 2800,
+      "status": "AVAILABLE",
+      "patientId": null,
+      "patientName": null,
+      "admittedDate": null
+    },
+    {
+      "id": "BED-DLX-302",
+      "ward": "Deluxe Private Suite",
+      "roomType": "Deluxe Single AC",
+      "number": "DLX-302",
+      "dailyRate": 2800,
+      "status": "MAINTENANCE",
+      "patientId": null,
+      "patientName": null,
+      "admittedDate": null
+    },
+    {
+      "id": "BED-EMG-01",
+      "ward": "Emergency Observation",
+      "roomType": "Emergency Bay",
+      "number": "EMG-01",
+      "dailyRate": 1500,
+      "status": "AVAILABLE",
+      "patientId": null,
+      "patientName": null,
+      "admittedDate": null
+    }
+  ],
+  "pharmacyInventory": [
+    {
+      "id": "MED-001",
+      "name": "Atorvastatin 20mg (Atorva)",
+      "category": "Cardiovascular",
+      "dosageForm": "Tablet",
+      "stock": 450,
+      "unitPrice": 12.5,
+      "batch": "BAT-7721",
+      "expiry": "2027-08-31"
+    },
+    {
+      "id": "MED-002",
+      "name": "Amlodipine 5mg (Amlong)",
+      "category": "Antihypertensive",
+      "dosageForm": "Tablet",
+      "stock": 620,
+      "unitPrice": 4.5,
+      "batch": "BAT-9932",
+      "expiry": "2027-11-30"
+    },
+    {
+      "id": "MED-003",
+      "name": "Metformin ER 1000mg (Glycomet-SR)",
+      "category": "Antidiabetic",
+      "dosageForm": "Tablet",
+      "stock": 380,
+      "unitPrice": 6,
+      "batch": "BAT-1104",
+      "expiry": "2028-02-28"
+    },
+    {
+      "id": "MED-004",
+      "name": "Thyronorm (Levothyroxine) 50mcg",
+      "category": "Hormone",
+      "dosageForm": "Tablet",
+      "stock": 290,
+      "unitPrice": 3.5,
+      "batch": "BAT-4450",
+      "expiry": "2027-05-31"
+    },
+    {
+      "id": "MED-005",
+      "name": "Augmentin (Amoxicillin + Clav) 625mg",
+      "category": "Antibiotic",
+      "dosageForm": "Tablet",
+      "stock": 180,
+      "unitPrice": 24,
+      "batch": "BAT-3321",
+      "expiry": "2027-04-15"
+    },
+    {
+      "id": "MED-006",
+      "name": "Dolo 650mg (Paracetamol)",
+      "category": "Analgesic & Antipyretic",
+      "dosageForm": "Tablet",
+      "stock": 1200,
+      "unitPrice": 2.5,
+      "batch": "BAT-6651",
+      "expiry": "2028-10-31"
+    },
+    {
+      "id": "MED-007",
+      "name": "Pan 40mg (Pantoprazole)",
+      "category": "Gastrointestinal",
+      "dosageForm": "Tablet",
+      "stock": 540,
+      "unitPrice": 9.5,
+      "batch": "BAT-5519",
+      "expiry": "2027-09-30"
+    },
+    {
+      "id": "MED-008",
+      "name": "Normal Saline 0.9% (500ml)",
+      "category": "IV Fluids",
+      "dosageForm": "Bottle",
+      "stock": 95,
+      "unitPrice": 65,
+      "batch": "BAT-8820",
+      "expiry": "2028-06-30"
+    }
+  ],
+  "invoices": [
+    {
+      "id": "INV-7001",
+      "patientId": "PAT-1001",
+      "patientName": "Ramesh Patel",
+      "date": "2026-11-06",
+      "items": [
+        {
+          "desc": "Doctor Consultation Fee - Dr. Priya Nair (Cardiology)",
+          "qty": 1,
+          "rate": 800,
+          "amount": 800
+        },
+        {
+          "desc": "Laboratory: Complete Blood Count (CBC)",
+          "qty": 1,
+          "rate": 350,
+          "amount": 350
+        },
+        {
+          "desc": "Laboratory: Lipid Profile Panel",
+          "qty": 1,
+          "rate": 650,
+          "amount": 650
+        },
+        {
+          "desc": "Pharmacy: Atorvastatin 20mg (30 tabs)",
+          "qty": 30,
+          "rate": 12.5,
+          "amount": 375
+        },
+        {
+          "desc": "Pharmacy: Amlodipine 5mg (30 tabs)",
+          "qty": 30,
+          "rate": 4.5,
+          "amount": 135
+        }
+      ],
+      "subtotal": 2310,
+      "tax": 115.5,
+      "discount": 100,
+      "total": 2325.5,
+      "paymentMethod": "UPI / Google Pay",
+      "status": "PAID"
+    },
+    {
+      "id": "INV-7002",
+      "patientId": "PAT-1002",
+      "patientName": "Sunita Sharma",
+      "date": "2026-11-07",
+      "items": [
+        {
+          "desc": "Doctor Consultation Fee - Dr. Rajesh Kulkarni",
+          "qty": 1,
+          "rate": 500,
+          "amount": 500
+        },
+        {
+          "desc": "Laboratory: Glycated Hemoglobin (HbA1c)",
+          "qty": 1,
+          "rate": 550,
+          "amount": 550
+        },
+        {
+          "desc": "Pharmacy: Metformin ER 1000mg (60 tabs)",
+          "qty": 60,
+          "rate": 6,
+          "amount": 360
+        }
+      ],
+      "subtotal": 1410,
+      "tax": 70.5,
+      "discount": 0,
+      "total": 1480.5,
+      "paymentMethod": "PhonePe / Paytm UPI",
+      "status": "PAID"
+    },
+    {
+      "id": "INV-7003",
+      "patientId": "PAT-1003",
+      "patientName": "Vikram Malhotra",
+      "date": "2026-11-07",
+      "items": [
+        {
+          "desc": "Emergency Triage & Consultation",
+          "qty": 1,
+          "rate": 1000,
+          "amount": 1000
+        },
+        {
+          "desc": "Laboratory: Dengue Duo Serology (NS1 + IgM/IgG)",
+          "qty": 1,
+          "rate": 900,
+          "amount": 900
+        },
+        {
+          "desc": "ICCU Bed Charges (Day 1)",
+          "qty": 1,
+          "rate": 4500,
+          "amount": 4500
+        },
+        {
+          "desc": "IV Fluids & Infusion Set (2 units)",
+          "qty": 2,
+          "rate": 130,
+          "amount": 260
+        }
+      ],
+      "subtotal": 6660,
+      "tax": 333,
+      "discount": 0,
+      "total": 6993,
+      "paymentMethod": "Pending Discharge Settlement (TPA Insurance)",
+      "status": "PENDING"
+    }
+  ]
+}
