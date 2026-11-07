@@ -51,8 +51,8 @@ async function renderPatientPortal(container) {
           </div>
         </div>
 
-        <!-- 2x2 Vitals Metric Grid -->
-        <div class="grid grid-cols-2 gap-2.5">
+        <!-- 2x2 on Mobile, 4-Cols on Desktop -->
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-3">
           <div class="bg-white p-3 rounded-2xl border border-slate-200/80 shadow-sm flex items-center space-x-3">
             <div class="w-10 h-10 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center font-bold text-lg">
               ❤️
@@ -101,7 +101,7 @@ async function renderPatientPortal(container) {
             <span class="text-[10px] text-rose-600 font-bold">${labOrders.length} Orders</span>
           </div>
 
-          <div class="space-y-2.5">
+          <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3">
             ${labOrders.length === 0 ? `
               <div class="p-6 text-center text-slate-400 bg-white rounded-2xl border border-slate-200 text-xs">No blood reports yet</div>
             ` : labOrders.map(o => {
@@ -146,7 +146,7 @@ async function renderPatientPortal(container) {
             <span class="text-[10px] text-purple-600 font-bold">${prescriptions.length} Records</span>
           </div>
 
-          <div class="space-y-2">
+          <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3">
             ${prescriptions.map(rx => `
               <div class="bg-white rounded-2xl border border-slate-200 p-3.5 shadow-sm space-y-2">
                 <div class="flex items-center justify-between">
@@ -174,7 +174,7 @@ async function renderPatientPortal(container) {
             <span class="text-[10px] text-slate-400 font-mono">${invoices.length} Invoices</span>
           </div>
 
-          <div class="space-y-2">
+          <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3">
             ${invoices.map(inv => `
               <div class="bg-white rounded-2xl border border-slate-200 p-3 shadow-sm flex items-center justify-between">
                 <div>

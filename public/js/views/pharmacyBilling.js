@@ -48,8 +48,8 @@ async function renderPharmacyBilling(container) {
           </div>
         </div>
 
-        <!-- 2x2 Metric Grid -->
-        <div class="grid grid-cols-2 gap-2.5">
+        <!-- 2x2 on Mobile, 4-Cols on Desktop -->
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-3">
           <div class="bg-white p-3 rounded-2xl border border-slate-200/80 shadow-sm flex items-center space-x-3">
             <div class="w-10 h-10 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center font-bold text-lg">
               📦
@@ -134,7 +134,7 @@ function renderPharmCurrentTab() {
 // ----------------------------------------------------
 function renderPharmacyInventoryCards(target) {
   target.innerHTML = `
-    <div class="space-y-2.5">
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3">
       ${pharmacyInventory.map(m => {
         const isLow = m.stock < 150;
         return `
@@ -174,7 +174,7 @@ function renderPharmacyInventoryCards(target) {
 // ----------------------------------------------------
 function renderInvoicesCards(target) {
   target.innerHTML = `
-    <div class="space-y-2.5">
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3">
       ${billingInvoices.map(inv => {
         const isPaid = inv.status === 'PAID';
         return `

@@ -48,8 +48,8 @@ async function renderReceptionDesk(container) {
           </div>
         </div>
 
-        <!-- 2x2 Metric Grid -->
-        <div class="grid grid-cols-2 gap-2.5">
+        <!-- 2x2 on Mobile, 4-Cols on Desktop -->
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-3">
           <div class="bg-white p-3 rounded-2xl border border-slate-200/80 shadow-sm flex items-center space-x-3">
             <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center font-bold text-lg">
               👥
@@ -143,7 +143,7 @@ function renderRecPatientsCards(target) {
       <input type="text" id="recSearchPatient" onkeyup="filterRecPatients()" placeholder="🔍 Search patient by name, ID, phone..." 
         class="w-full px-4 py-2.5 text-xs bg-white border border-slate-200 rounded-2xl shadow-sm focus:outline-none">
 
-      <div id="recPatientsContainer" class="space-y-2.5">
+      <div id="recPatientsContainer" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3">
         ${generateRecPatientsCards(recPatients)}
       </div>
     </div>
@@ -201,7 +201,7 @@ function filterRecPatients() {
 // ----------------------------------------------------
 function renderRecAppointmentsCards(target) {
   target.innerHTML = `
-    <div class="space-y-2.5">
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3">
       ${recAppointments.map(a => `
         <div class="bg-white rounded-2xl border border-slate-200/90 p-3.5 shadow-sm flex items-center justify-between">
           <div class="flex items-center space-x-3">
@@ -230,7 +230,7 @@ function renderRecAppointmentsCards(target) {
 // ----------------------------------------------------
 function renderRecBedsCards(target) {
   target.innerHTML = `
-    <div class="grid grid-cols-2 gap-2.5">
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3">
       ${recBeds.map(b => {
         const isOcc = b.status === 'OCCUPIED';
         return `

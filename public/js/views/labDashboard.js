@@ -52,8 +52,8 @@ async function renderLabDashboard(container) {
           </div>
         </div>
 
-        <!-- 2x2 Compact Metric Grid -->
-        <div class="grid grid-cols-2 gap-2.5">
+        <!-- 2x2 on Mobile, 4-Cols on Desktop -->
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-3">
           <div class="bg-white p-3 rounded-2xl border border-slate-200/80 shadow-sm flex items-center space-x-3">
             <div class="w-10 h-10 rounded-xl bg-rose-50 text-rose-600 flex items-center justify-center font-bold text-lg">
               🩸
@@ -156,8 +156,8 @@ function renderLabOrdersCards(target) {
           class="w-full px-4 py-2.5 text-xs bg-white border border-slate-200 rounded-2xl shadow-sm focus:outline-none focus:ring-2 focus:ring-rose-500/20">
       </div>
 
-      <!-- Orders Mobile Cards Container -->
-      <div id="labOrdersContainer" class="space-y-3">
+      <!-- Orders Responsive Cards Container -->
+      <div id="labOrdersContainer" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3.5">
         ${generateLabOrdersCards(labOrdersData)}
       </div>
 
@@ -273,7 +273,7 @@ function renderPhlebotomyStation(target) {
         </div>
       </div>
 
-      <div class="space-y-2.5">
+      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3">
         ${pending.length === 0 ? `
           <div class="p-8 text-center text-slate-400 bg-white rounded-2xl border border-slate-200 text-xs">
             ✓ Phlebotomy queue is clear. All ordered samples drawn!
@@ -305,7 +305,7 @@ function renderPhlebotomyStation(target) {
 // ----------------------------------------------------
 function renderLabCatalogList(target) {
   target.innerHTML = `
-    <div class="space-y-2.5">
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3">
       ${labCatalogData.map(t => `
         <div class="bg-white rounded-2xl border border-slate-200 p-3.5 shadow-sm flex items-center justify-between">
           <div class="flex-1 pr-2">
@@ -329,7 +329,7 @@ function renderLabCatalogList(target) {
 // ----------------------------------------------------
 function renderLabPackagesGrid(target) {
   target.innerHTML = `
-    <div class="space-y-3">
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3.5">
       ${labPackagesData.map(pkg => `
         <div class="bg-white rounded-2xl border border-slate-200 p-4 shadow-sm space-y-3">
           <div class="flex items-center justify-between">

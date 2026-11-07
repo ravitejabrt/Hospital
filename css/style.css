@@ -6,21 +6,25 @@
   --app-safe-bottom: env(safe-area-inset-bottom, 0px);
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  background-color: #0f172a;
+  background-color: #f8fafc;
   color: #0f172a;
   margin: 0;
   padding: 0;
   -webkit-tap-highlight-color: transparent;
-  user-select: none;
+  min-height: 100vh;
 }
 
 code, .font-mono {
   font-family: 'JetBrains Mono', monospace;
 }
 
-/* Hide scrollbar for native app feel */
+/* Hide scrollbars for native feel */
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
@@ -29,47 +33,68 @@ code, .font-mono {
   scrollbar-width: none;
 }
 
-/* Mobile Smartphone Shell Container (When tested on desktop) */
-.mobile-device-frame {
-  max-width: 440px;
+/* ----------------------------------------------------
+   DESKTOP / SYSTEM MODE STYLES
+   ---------------------------------------------------- */
+.desktop-sidebar {
+  width: 270px;
+  min-width: 270px;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  background-color: #0f172a;
+  color: #f8fafc;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #1e293b;
+  z-index: 40;
+}
+
+.desktop-nav-link {
+  display: flex;
+  align-items: center;
+  space-x: 12px;
+  padding: 10px 14px;
+  border-radius: 14px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #94a3b8;
+  transition: all 0.15s ease;
+  cursor: pointer;
+}
+.desktop-nav-link:hover {
+  background-color: #1e293b;
+  color: #ffffff;
+}
+.desktop-nav-link.active {
+  background: linear-gradient(135deg, #e11d48 0%, #be123c 100%);
+  color: #ffffff;
+  font-weight: 700;
+  box-shadow: 0 4px 14px -2px rgba(225, 29, 72, 0.4);
+}
+
+/* ----------------------------------------------------
+   MOBILE PREVIEW ON DESKTOP (When simulated)
+   ---------------------------------------------------- */
+.mobile-preview-frame {
+  max-width: 430px;
   width: 100%;
-  margin: 0 auto;
-  min-height: 100vh;
+  margin: 16px auto;
+  min-height: calc(100vh - 32px);
   background-color: #f8fafc;
-  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.5), 0 0 0 12px #1e293b, 0 0 0 14px #334155;
-  border-radius: 44px;
+  box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.35), 0 0 0 10px #0f172a;
+  border-radius: 40px;
   overflow: hidden;
   position: relative;
   display: flex;
   flex-direction: column;
 }
 
-/* Full responsive mobile mode */
-.mobile-device-fluid {
-  max-width: 100% !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
-  min-height: 100vh;
-  background-color: #f8fafc;
-}
-
-/* Mobile Dynamic Island / Notch */
-.mobile-notch {
-  width: 110px;
-  height: 24px;
-  background-color: #0f172a;
-  border-radius: 20px;
-  margin: 8px auto 4px auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 10px;
-  z-index: 50;
-}
-
-/* Mobile Bottom Sheet Modal */
+/* ----------------------------------------------------
+   MOBILE BOTTOM SHEET ANIMATION
+   ---------------------------------------------------- */
 .mobile-bottom-sheet {
-  animation: slideUpSheet 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: slideUpSheet 0.24s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 @keyframes slideUpSheet {
@@ -83,12 +108,12 @@ code, .font-mono {
   }
 }
 
-/* Touch active scale */
+/* Scale touch response */
 button, .touch-btn {
   transition: transform 0.1s ease, background-color 0.15s ease;
 }
 button:active, .touch-btn:active {
-  transform: scale(0.97);
+  transform: scale(0.98);
 }
 
 /* Flag badges */
@@ -131,7 +156,7 @@ button:active, .touch-btn:active {
 .tube-grey { background-color: #f1f5f9; color: #475569; border: 1px solid #cbd5e1; }
 .tube-blue { background-color: #e0f2fe; color: #0369a1; border: 1px solid #bae6fd; }
 
-/* Gradient backgrounds */
+/* Gradients */
 .gradient-blood {
   background: linear-gradient(135deg, #e11d48 0%, #be123c 60%, #881337 100%);
 }
@@ -144,7 +169,7 @@ button:active, .touch-btn:active {
   body {
     background: white !important;
   }
-  .mobile-device-frame {
+  .desktop-sidebar, .mobile-preview-frame {
     box-shadow: none !important;
     border-radius: 0 !important;
     max-width: 100% !important;

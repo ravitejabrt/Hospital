@@ -53,8 +53,8 @@ async function renderDoctorDashboard(container) {
           </div>
         </div>
 
-        <!-- 2x2 Metric Grid -->
-        <div class="grid grid-cols-2 gap-2.5">
+        <!-- 2x2 on Mobile, 4-Cols on Desktop -->
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-3">
           <div class="bg-white p-3 rounded-2xl border border-slate-200/80 shadow-sm flex items-center space-x-3">
             <div class="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center font-bold text-lg">
               📅
@@ -103,7 +103,7 @@ async function renderDoctorDashboard(container) {
             <span class="text-[10px] text-blue-600 font-bold font-mono">${waitingTokens.length} Pending</span>
           </div>
 
-          <div class="space-y-2.5">
+          <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3">
             ${myApts.length === 0 ? `
               <div class="p-8 text-center text-slate-400 bg-white rounded-2xl border border-slate-200 text-xs">No scheduled patients today</div>
             ` : myApts.map(a => {
@@ -156,7 +156,7 @@ async function renderDoctorDashboard(container) {
             <span class="text-[10px] text-rose-600 font-bold">${myPatientLabReports.length} Available</span>
           </div>
 
-          <div class="space-y-2">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2.5">
             ${myPatientLabReports.slice(0, 4).map(r => {
               const hasAbnormal = (r.results || []).some(item => item.flag && item.flag !== 'NORMAL');
               return `

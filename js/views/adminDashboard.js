@@ -45,8 +45,8 @@ async function renderAdminDashboard(container) {
           </div>
         </div>
 
-        <!-- 2x2 Metric Grid -->
-        <div class="grid grid-cols-2 gap-2.5">
+        <!-- 2x2 on Mobile, 4-Cols on Desktop -->
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-3">
           <div class="bg-white p-3 rounded-2xl border border-slate-200 shadow-sm">
             <span class="text-[9px] text-slate-400 uppercase font-bold block mb-0.5">Patients</span>
             <div class="flex items-baseline space-x-1.5">
@@ -86,7 +86,7 @@ async function renderAdminDashboard(container) {
             <span class="text-[10px] text-indigo-600 font-bold">${adminUsers.length} Staff</span>
           </div>
 
-          <div class="space-y-2">
+          <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3">
             ${adminUsers.map(u => {
               let roleBadge = '';
               if (u.role === 'admin') roleBadge = `<span class="px-2 py-0.5 bg-slate-900 text-white rounded text-[8px] font-bold">Admin</span>`;
